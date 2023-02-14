@@ -2,22 +2,29 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style: none;
 }
 
-body {
+
+/* body {
     background-image: url(/images/spotify-background.jpeg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     height: 100vh;
-}
+} */
 
-.container {
+.containerHome {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 100vh;
+    background-image: url(/images/spotify-background.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
+
 
 #search {
     display: flex;
@@ -38,4 +45,129 @@ body {
     padding: 10px;
     border-radius: 5px;
     background-color: green;
+}
+
+
+
+/* CSS */
+a,
+button {
+    appearance: none;
+    background-color: #2ea44f;
+    border: 1px solid rgba(27, 31, 35, .15);
+    border-radius: 6px;
+    box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 6px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+a,
+button:focus:not(:focus-visible):not(.focus-visible) {
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
+}
+
+a,
+button:hover {
+    background-color: #2c974b;
+    cursor: pointer;
+}
+
+a,
+button:focus {
+    box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+    outline: none;
+    cursor: pointer;
+}
+
+a,
+button:disabled {
+    background-color: #94d3a2;
+    border-color: rgba(27, 31, 35, .1);
+    color: rgba(255, 255, 255, .8);
+    cursor: default;
+    cursor: pointer;
+}
+
+a,
+button:active {
+    background-color: #298e46;
+    box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+    cursor: pointer;
+}
+
+.artistContainer,
+.albumContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.eachArtists,
+.eachAlbum {
+    background-color: darkgrey;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+.eachArtists li:nth-child(1) {
+    font-size: 1.5rem;
+    font-weight: 20px;
+}
+
+.eachArtists li img {
+    height: 350px;
+    width: 320px;
+    border-radius: 10px;
+}
+
+.containerAllTracks {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.titleContainer,
+.eachTracks {
+    display: flex;
+    justify-content: space-between;
+}
+
+.titleContainer {
+    background-color: black;
+    color: white;
+    width: 100%;
+}
+
+.eachTracks li,
+.eachTracks audio {
+    margin: 20px;
+}
+
+.eachTracks audio {
+    width: 30rem;
+}
+
+.titleContainer h1 {
+    margin: 20px;
 }

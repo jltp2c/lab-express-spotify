@@ -1,13 +1,17 @@
-<h1>Title</h1>
-<h1>Listen</h1>
-<div class="trackContainer">
-    {{#each tracks }}
-    <ul class="eachTracks">
-        <li> {{this.name}}</li>
-    <audio controls src="{{preview_url}}">
-        <a href="{{preview_url}}">
-        </a>
-    </audio>
-    </ul>
-    {{/each}}
+<div class="containerAllTracks">
+    <div class="titleContainer">
+        <h1>Title</h1>
+        <h1>Listen</h1>
+    </div>
+    <div class="trackContainer">
+        {{#each tracks }}
+        <ul class="eachTracks">
+            <li> {{this.name}}</li>
+            <audio controls src="{{preview_url}}">
+                <a href="{{preview_url}}">
+                </a>
+            </audio>
+        </ul>
+        {{/each}}
+    </div>
 </div>
